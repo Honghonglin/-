@@ -49,6 +49,39 @@ public class SinglePanel : MonoBehaviour
                 item.SetActive(true);
             }
         }
+        if(Input.GetMouseButton(2)&&Lis.Count!=0)
+        {
+            Reset_Pos();
+        }
+    }
+    public void Reset_Pos()
+    {
+        if (Is_across)
+        {
+            Vector3 offset = gameObject.transform.Find("leftnorth").position - gameObject.transform.Find("leftsorth").position;
+            float lineinteval = offset.magnitude / (Pathway_count - 1);
+            Vector3 firstleft = gameObject.transform.Find("leftnorth").position;
+            Vector3 firstright = gameObject.transform.Find("rightnorth").position;
+            for (int i = 0; i < Lis.Count; i++)
+            {
+                Vector3 left = firstleft - i * lineinteval * offset.normalized;
+                Vector3 right = firstright - i * lineinteval * offset.normalized;
+                LineRenderPosSet(left, right, Lis[i].GetComponent<LineRenderer>());
+            }
+        }
+        else
+        {
+            Vector3 offset = gameObject.transform.Find("rightnorth").position - gameObject.transform.Find("leftnorth").position;
+            float lineinteval = offset.magnitude / (Pathway_count - 1);
+            Vector3 firstleft = gameObject.transform.Find("leftnorth").position;
+            Vector3 firstright = gameObject.transform.Find("leftsorth").position;
+            for (int i = 0; i < Lis.Count; i++)
+            {
+                Vector3 left = firstleft + i * lineinteval * offset.normalized;
+                Vector3 right = firstright + i * lineinteval * offset.normalized;
+                LineRenderPosSet(left, right, Lis[i].GetComponent<LineRenderer>());
+            }
+        }
     }
 
     /// <summary>
@@ -58,17 +91,17 @@ public class SinglePanel : MonoBehaviour
     {
         Vector3 offset = gameObject.transform.Find("rightnorth").position - gameObject.transform.Find("leftnorth").position;
         float sum = (Pathway_count - 1) * (ConstClass.interval + ConstClass.min_lineWidth);
-        if (offset.x < sum)
+        if (offset.magnitude < sum)
         {
             Debug.LogError("wrong");
         }
         else
         {
-            float lineinteval = offset.x / (Pathway_count - 1);
+            float lineinteval = offset.magnitude / (Pathway_count - 1);
             for (int i = 0; i < Pathway_count; i++)
             {
-                Vector3 left = gameObject.transform.Find("leftnorth").position + new Vector3(i * lineinteval, 0, 0);
-                Vector3 right = gameObject.transform.Find("leftsorth").position + new Vector3(i * lineinteval, 0, 0);
+                Vector3 left = gameObject.transform.Find("leftnorth").position + i * lineinteval * offset.normalized;
+                Vector3 right = gameObject.transform.Find("leftsorth").position + i * lineinteval * offset.normalized;
                 Pathwayactive(left, right);
             }
         }
@@ -119,18 +152,11 @@ public class SinglePanel : MonoBehaviour
     /// </summary>
     /// <param name="left"></param>
     /// <param name="right"></param>
-    public void LineRenderPosSet(Vector3 left,Vector3 right)
+    public void LineRenderPosSet(Vector3 left,Vector3 right,LineRenderer lineRenderer)
     {
-        if(Lis.Count!=0)
-        {
-            Vector3 NitVec = new Vector3(0, gameObject.transform.Find("leftnorth").position.y, 0).normalized;
-            foreach (var item in Lis)
-            {
-                LineRenderer lineRenderer = item.GetComponent<LineRenderer>();
-                lineRenderer.GetComponent<LineRenderer>().SetPosition(0, left - NitVec * 0.02f);
-                lineRenderer.GetComponent<LineRenderer>().SetPosition(1, right - NitVec * 0.02f);
-            }
-        }
+        Vector3 NitVec = new Vector3(0, gameObject.transform.Find("leftnorth").position.y, 0).normalized;
+        lineRenderer.GetComponent<LineRenderer>().SetPosition(0, left - NitVec * 0.02f);
+        lineRenderer.GetComponent<LineRenderer>().SetPosition(1, right - NitVec * 0.02f);
     }
 }
 

@@ -22,7 +22,7 @@ public class PanelControl : MonoBehaviour
     public Button ShowButton;
     public Button changebutton;
     readonly private int floor_count=9;
-    private RaycastHit hit=new RaycastHit();
+    private GameObject hitGameObject;
 
     /// <summary>
     /// 得到大小
@@ -143,36 +143,39 @@ public class PanelControl : MonoBehaviour
             #endregion
         }
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 50f,LayerMask.GetMask("Panel"))&&Input.GetMouseButtonDown(0)&&!isInCheck&&isChange)
         {
             #region 进入单层观察模式
             Debug.Log("进入单层观察模式");
+            hitGameObject = hit.collider.gameObject;
             foreach (GameObject item in panelList)
             {
-                if(item!=hit.collider.gameObject)
+                if(item!= hitGameObject)
                 {
                     item.SetActive(false);
                 }
             }
-            hit.collider.gameObject.GetComponent<SinglePanel>().IsSelet = true;
+            hitGameObject.GetComponent<SinglePanel>().IsSelet = true;
             inputField.enabled = false;
             dropdown.enabled = false;
             isInCheck = true;
             #endregion 
         }
-        if(isInCheck&&Input.GetMouseButtonDown(1))
+        else if(isInCheck&&Input.GetMouseButtonDown(0))
         {
             #region 退出单层观察模式
             foreach (GameObject item in panelList)
             {
                 item.SetActive(true);
             }
-            hit.collider.gameObject.GetComponent<SinglePanel>().IsSelet = false;
-            hit.collider.gameObject.GetComponent<SinglePanel>().IsAppearance = false;
-            hit.collider.gameObject.GetComponent<SinglePanel>().IsHave = true;
+            hitGameObject.GetComponent<SinglePanel>().IsSelet = false;
+            hitGameObject.GetComponent<SinglePanel>().IsAppearance = false;
+            hitGameObject.GetComponent<SinglePanel>().IsHave = true;
             ShowButton.gameObject.SetActive(false);
             HideButton.gameObject.SetActive(false);
             isInCheck = false;
+            hit = new RaycastHit();
             #endregion
         }
         #region 是否生成多层判断
@@ -187,9 +190,9 @@ public class PanelControl : MonoBehaviour
         #endregion
 
         #region 观察模式下按钮显示
-        if (hit.collider!=null)
+        if (hitGameObject != null)
         {
-            SinglePanel Hit_singlePanel = hit.collider.gameObject.GetComponent<SinglePanel>();
+            SinglePanel Hit_singlePanel = hitGameObject.GetComponent<SinglePanel>();
             if (isInCheck & Hit_singlePanel.IsSelet && Hit_singlePanel.IsHave && Hit_singlePanel.IsAppearance)
             {
                 HideButton.gameObject.SetActive(true);
@@ -242,16 +245,16 @@ public class PanelControl : MonoBehaviour
     
     public void HideButtonFun()
     {
-        if(hit.collider!=null)
+        if(hitGameObject!=null)
         {
-            hit.collider.gameObject.GetComponent<SinglePanel>().IsAppearance = false;
+            hitGameObject.GetComponent<SinglePanel>().IsAppearance = false;
         }
     }
     public void ShowButtonFun()
     {
-        if(hit.collider!=null)
+        if(hitGameObject!=null)
         {
-            hit.collider.gameObject.GetComponent<SinglePanel>().IsAppearance = true;
+            hitGameObject.GetComponent<SinglePanel>().IsAppearance = true;
         }
     }
     

@@ -12,7 +12,7 @@ public class Pos_Set : MonoBehaviour
     private GameObject _Panel;
     private void Start()
     {
-        _WorldCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        _WorldCamera = GameObject.Find("Part5Camera").GetComponent<Camera>();
         _Target = gameObject.transform.Find("Target");
         _Panel = GameObject.FindGameObjectWithTag("Canvas");
         _text = Instantiate(text, _Panel.transform.Find("PointText"));

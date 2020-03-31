@@ -62,6 +62,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Auto\AutoGameControl.cs" />
+    <Compile Include="Assets\Script\Auto\AutoGUIControl.cs" />
+    <Compile Include="Assets\Script\Auto\AutoSinglePlane.cs" />
+    <Compile Include="Assets\Script\Auto\C++interface.cs" />
+    <Compile Include="Assets\Script\Auto\Date.cs" />
+    <Compile Include="Assets\Script\Auto\File_Reader.cs" />
+    <Compile Include="Assets\Script\Auto\File_Writer.cs" />
+    <Compile Include="Assets\Script\Auto\MathInterface.cs" />
     <Compile Include="Assets\Script\Modify.cs" />
     <Compile Include="Assets\Script\Part5\CameraSet.cs" />
     <Compile Include="Assets\Script\Part5\ConstClass.cs" />
@@ -75,6 +83,13 @@
     <Compile Include="Assets\Script\Part5\Temp.cs" />
     <Compile Include="Assets\Script\Part5\TextControl.cs" />
     <Compile Include="Assets\Script\Part5\UI_Message.cs" />
+    <None Include="Assets\StreamingAssets\pinmessage.txt" />
+    <None Include="Assets\StreamingAssetsroutingspace.txt" />
+    <None Include="Assets\StreamingAssets\randpin.txt" />
+    <None Include="Assets\StreamingAssets\candidatepin.txt" />
+    <None Include="Assets\StreamingAssets\createin.txt" />
+    <None Include="Assets\StreamingAssets\routingspace.txt" />
+    <None Include="Assets\StreamingAssets\result.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>F:/unityproject/Deom-master/Deom-master/Demo/Elastic_ball/主要界面/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
