@@ -229,12 +229,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &180488145 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6363187824518622507, guid: bb9ff029a5e96fe47aed8a5838d956c6,
-    type: 3}
-  m_PrefabInstance: {fileID: 923394281}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &184971955
 GameObject:
   m_ObjectHideFlags: 0
@@ -3767,6 +3761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb704918d8391440bbf83639012334e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tartget: {x: 0, y: 0, z: 0}
   dropdown1: {fileID: 1605088108}
   dropdown2: {fileID: 1388122362}
   dropdown3: {fileID: 1699691863}
@@ -3776,7 +3771,6 @@ MonoBehaviour:
   - {fileID: 282179594}
   - {fileID: 988117680}
   - {fileID: 1266026245}
-  basePanel: {fileID: 180488145}
 --- !u!114 &1468010194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5351,6 +5345,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1926277434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1926277435}
+  m_Layer: 0
+  m_Name: PanelContain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1926277435
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926277434}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5336318, y: 8.214929, z: -10.90749}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1933804794
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,11 +26,14 @@ namespace Assets.Script.Auto
                     using (StreamReader streamReader = new StreamReader(fs))
                     {
                         streamReader.ReadLine();
+                        int count = 1;
                         while (!streamReader.EndOfStream)
                         {
                             var temp = Regex.Matches(streamReader.ReadLine(), @"(((\d+)\.){1}\d+)|\d+").OfType<Match>().Select(m => m.Groups[0].Value).ToArray();
                             Point point = new Point();
                             point.Change(temp);
+                            point.Number = count;
+                            count++;
                             points.Add(point);
                         }
                     } 
@@ -57,8 +60,15 @@ namespace Assets.Script.Auto
                             for (int i = 0; i < length; i++)
                             {
                                 var temp = Regex.Matches(streamReader.ReadLine(), @"(((\d+)\.){1}\d+)|\d+").OfType<Match>().Select(m => m.Groups[0].Value).ToArray();
-                                Point point = new Point();
+                                Point point = new Point();                                
                                 point.Change(temp);
+                                foreach (var point1 in Date.allBasePoint)
+                                {
+                                    if (point1.Equals(point))
+                                    {
+                                        point.Number = point1.Number;
+                                    }
+                                }
                                 lineNet.Points.Add(point);
                             }
                             nets.Add(lineNet);
