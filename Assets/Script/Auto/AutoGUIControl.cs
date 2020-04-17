@@ -10,10 +10,10 @@ namespace Assets.Script.Auto
 {
     class AutoGUIControl:MonoBehaviour
     {
-        public Button[] buttons;
-        public GameObject TextContain;
-        private GameObject textPrefab;
-        private GameObject gameCanvas;
+        public Button[] buttons = null;
+        public GameObject TextContain = null;
+        private GameObject textPrefab=null;
+        private GameObject gameCanvas=null;
 
         private void Start()
         {
@@ -26,24 +26,9 @@ namespace Assets.Script.Auto
                 {
                     item.onClick.AddListener(() => CreatText());
                 }
-                if(t =="返回1")
-                {
-                    item.onClick.AddListener(() => DestroyText());
-                }
                 if(t=="返回2")
                 {
-                    item.onClick.AddListener(() => UnactiveText());
-                }
-
-            }
-        }
-        private void UnactiveText()
-        {
-            foreach (var net in Date.lineNets)
-            {
-                foreach (var item in net.Texts)
-                {
-                    item.gameObject.SetActive(false);
+                    item.onClick.AddListener(() => DestroyText());
                 }
             }
         }

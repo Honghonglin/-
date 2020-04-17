@@ -69,7 +69,8 @@
     <Compile Include="Assets\Script\Auto\Date.cs" />
     <Compile Include="Assets\Script\Auto\File_Reader.cs" />
     <Compile Include="Assets\Script\Auto\File_Writer.cs" />
-    <Compile Include="Assets\Script\Auto\MathInterface.cs" />
+    <Compile Include="Assets\Script\Auto\Limit.cs" />
+    <Compile Include="Assets\Script\Auto\LimitTextFactory.cs" />
     <Compile Include="Assets\Script\Modify.cs" />
     <Compile Include="Assets\Script\Part5\CameraSet.cs" />
     <Compile Include="Assets\Script\Part5\ConstClass.cs" />
@@ -83,13 +84,22 @@
     <Compile Include="Assets\Script\Part5\Temp.cs" />
     <Compile Include="Assets\Script\Part5\TextControl.cs" />
     <Compile Include="Assets\Script\Part5\UI_Message.cs" />
+    <None Include="Assets\StreamingAssets\prlviolation.txt" />
     <None Include="Assets\StreamingAssets\pinmessage.txt" />
+    <None Include="Assets\StreamingAssets\mental.txt" />
+    <None Include="Assets\StreamingAssets\cutsviolation.txt" />
+    <None Include="Assets\StreamingAssets\eofviolation.txt" />
     <None Include="Assets\StreamingAssetsroutingspace.txt" />
     <None Include="Assets\StreamingAssets\randpin.txt" />
     <None Include="Assets\StreamingAssets\candidatepin.txt" />
+    <None Include="Assets\StreamingAssets\mental1.txt" />
+    <None Include="Assets\StreamingAssets\ctcviolation.txt" />
+    <None Include="Assets\StreamingAssets\Wire.txt" />
     <None Include="Assets\StreamingAssets\createin.txt" />
+    <None Include="Assets\StreamingAssets\temp.txt" />
     <None Include="Assets\StreamingAssets\routingspace.txt" />
     <None Include="Assets\StreamingAssets\result.txt" />
+    <None Include="Assets\StreamingAssets\areaviolation.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>F:/unityproject/Deom-master/Deom-master/Demo/Elastic_ball/主要界面/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

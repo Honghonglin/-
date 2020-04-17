@@ -45,28 +45,69 @@ public class Temp : MonoBehaviour
 
     //[DllImport("link 9")]
     //private static extern double Multip(double x, double y);
-    [DllImport("link 12")]
+    [DllImport("link 14")]
     private static extern void Func();
+    [DllImport("link3")]
+    private static extern void LimitFun();
 
+    //public GameObject t;
     private void Start()
     {
-        File_Writer file_Writer = new File_Writer();
-        file_Writer.RouWriter(5, 90, 40, 5);
-        file_Writer.PinWriter(4);
-        Func();
-        File_Reader file_Reader = new File_Reader();
-        List<Point> points = new List<Point>();
-        file_Reader.CandRead(points);
-        List<Net> nets = new List<Net>();
-        file_Reader.RanRead(nets);
-        foreach (var net in nets)
-        {
-            foreach (var item in net.Points)
-            {
-                Debug.Log(item);
-            }
-        }
-        
+
+
+
+
+        //new GameObject();
+
+
+        //t.transform.localScale = new Vector3(2, 1, 2);
+        //Instantiate(t);
+        //print( Mathf.Abs((t.transform.Find("leftnorth").transform.position - t.transform.Find("rightnorth").transform.position).magnitude));
+        //print( Mathf.Abs((t.transform.Find("leftnorth").transform.position - t.transform.Find("leftsorth").transform.position).magnitude));
+
+        //    File_Writer file_Writer = new File_Writer();
+        //    file_Writer.RouWriter(5, 90, 40, 5);
+        //    file_Writer.PinWriter(4);
+        //    Func();
+        //File_Reader file_Reader = new File_Reader();
+        //List<PanelLineLimit> panelLineLimits = new List<PanelLineLimit>();
+        //List<PanelEndtailLimit> panelEndtailLimits = new List<PanelEndtailLimit>();
+        //List<PanelThroughtLimit> panelThroughtLimits = new List<PanelThroughtLimit>();
+        //List<PanelEdgeLimit> panelEdgeLimits = new List<PanelEdgeLimit>();
+        //List<PanelMinAreaLimit> panelMinAreaLimits = new List<PanelMinAreaLimit>();
+        //file_Reader.PrlvRead(panelLineLimits);
+        //file_Reader.EofvRead(panelEndtailLimits);
+        //file_Reader.CutsvRead(panelThroughtLimits);
+        //file_Reader.CtcvRead(panelEdgeLimits);
+        //file_Reader.AreaRead(panelMinAreaLimits);
+        //print("sss");
+        //LimitFun();
+
+        //List<Net> nets = new List<Net>();
+        //for (int i = 0; i < 5; i++)
+        //{
+        //    nets.Add(new Net());
+        //}
+        ////file_Reader.CreatResultRead(nets);
+        //foreach (var net in nets)
+        //{
+        //    print("线网");
+        //    foreach (var pair in net.PathPair)
+        //    {
+        //        Debug.Log(pair);
+        //    }
+        //}
+        //    List<Point> points = new List<Point>();
+        //    file_Reader.CandRead(points);
+        //    List<Net> nets = new List<Net>();
+        //    file_Reader.RanRead(nets);
+        //    foreach (var net in nets)
+        //    {
+        //        foreach (var item in net.Points)
+        //        {
+        //            Debug.Log(item);
+        //        }
+        //    }
 
         //File_Writer.CreateClass createClass = new File_Writer.CreateClass
         //{

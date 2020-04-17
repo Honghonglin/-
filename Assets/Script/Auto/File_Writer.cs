@@ -12,7 +12,11 @@ namespace Assets.Script.Auto
     {
         private string Path1 { get;  set; } = "routingspace.txt";
         private string Path2 { get;  set; } = "pinmessage.txt";
-        private string Path3 { get;  set; } = "createin.txt";
+        private string Path3 { get;  set; } = "temp.txt";
+        private string Path4 { get; set; } = "Wire.txt";
+        private string Path5 { get; set; } = "mental.txt";
+        private string Path6 { get; set; } = "mental1.txt";
+
         /// <summary>
         /// Path1Writer
         /// </summary>
@@ -80,6 +84,78 @@ namespace Assets.Script.Auto
                 }
             }
         }
+        
+        public void LimitWireWriter(Limit limit)
+        {
+            if (File.Exists(Application.streamingAssetsPath + "/" + Path4))
+            {
+                File.Delete(Application.streamingAssetsPath + "/" + Path4);
+            }
+            using (FileStream fs = File.Create(Application.streamingAssetsPath + "/" + Path4))
+            {
+                using (StreamWriter streamWriter = new StreamWriter(fs))
+                {
+                    streamWriter.WriteLine(limit.Line_recoverLines.Count);
+                    foreach (var line_RecoverLine in limit.Line_recoverLines)
+                    {
+                        streamWriter.WriteLine(line_RecoverLine.Line[line_RecoverLine.Line.Count - 1].GetLimitPoint()+" "
+                            +line_RecoverLine.Line[0].GetLimitPoint());
+                        streamWriter.WriteLine(line_RecoverLine.Recoverlines.Count);
+                        foreach (var line in line_RecoverLine.Recoverlines)
+                        {
+                            streamWriter.WriteLine(line[line.Count - 1].GetLimitPoint() + " " + line[0].GetLimitPoint());
+                        }
+                    }
+                }
+            }
+        }
+        
+        public void LimitMentalWriter(Limit limit)
+        {
+            if (File.Exists(Application.streamingAssetsPath + "/" + Path5))
+            {
+                File.Delete(Application.streamingAssetsPath + "/" + Path5);
+            }
+            using (FileStream fs = File.Create(Application.streamingAssetsPath + "/" + Path5))
+            {
+                using (StreamWriter streamWriter = new StreamWriter(fs))
+                {
+                    streamWriter.WriteLine(limit.Line_recoverPoints.Count);
+                    foreach (var line_RecoverPoint in limit.Line_recoverPoints)
+                    {
+                        streamWriter.WriteLine(line_RecoverPoint.MentalPoint.GetLimitPoint());
+                        streamWriter.WriteLine(line_RecoverPoint.Lines.Count);
+                        foreach (var line in line_RecoverPoint.Lines)
+                        {
+                            streamWriter.WriteLine(line[line.Count - 1].GetLimitPoint() + " " + line[0].GetLimitPoint());
+                        }
+                    }
+                }
+            }
+        }
+        public void LimitMental1Writer(Limit limit)
+        {
+            if (File.Exists(Application.streamingAssetsPath + "/" + Path6))
+            {
+                File.Delete(Application.streamingAssetsPath + "/" + Path6);
+            }
+            using (FileStream fs = File.Create(Application.streamingAssetsPath + "/" + Path6))
+            {
+                using (StreamWriter streamWriter = new StreamWriter(fs))
+                {
+                    streamWriter.WriteLine(limit.Point_recoverPoints.Count);
+                    foreach (var point_RecoverPoint in limit.Point_recoverPoints)
+                    {
+                        streamWriter.WriteLine(point_RecoverPoint.MentalPoint.GetLimitPoint());
+                        streamWriter.WriteLine(point_RecoverPoint.MentalPoints.Count);
+                        foreach (var point in point_RecoverPoint.MentalPoints)
+                        {
+                            streamWriter.WriteLine(point.GetLimitPoint());
+                        }
+                    }
+                }
+            }
+        }
 
         public class CreateClass
         {
@@ -101,15 +177,46 @@ namespace Assets.Script.Auto
             First = first;
             Second = second;
         }
-        private int First { get; set; }
-        private int Second { get; set; }
+        public int First { get; set; }
+        public int Second { get; set; }
         public override string ToString()
         {
             return First.ToString() + " " + Second.ToString();
         }
+        public override bool Equals(object obj)
+        {
+            if (obj == this)
+                return true;
+            if(obj!=this)
+            {
+                if(obj is Pair)
+                {
+                    Pair pair = obj as Pair;
+                    if(pair.First==this.First&&pair.Second==this.Second)
+                    {
+                        return true;
+                    }
+
+                }
+            }
+            return false;
+        }
+        public override int GetHashCode()
+        {
+            int result = 17;
+            result = 31 * result + First.GetHashCode();
+            result = 31 * result + Second.GetHashCode();
+            return result;
+        }
+
     }
 
-
+    public class Limit
+    {
+     public   List<Line_RecoverLine> Line_recoverLines { get; set; } = new List<Line_RecoverLine>();
+      public  List<Line_RecoverPoint>     Line_recoverPoints { get; set; } = new List<Line_RecoverPoint>();
+     public   List<Point_RecoverPoint> Point_recoverPoints { get; set; } = new List<Point_RecoverPoint>();
+    }
 
 
 
