@@ -11,8 +11,15 @@ F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\commom.cpp(27,30)
 F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\commom.cpp(36,31): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
   DLL.cpp
 F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\commom.cpp(56,6): warning C4101:  “t”: 未引用的局部变量
-  main.cpp
 F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\base.h(301,1): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\DLL.cpp(58,26): warning C4018:  “<”: 有符号/无符号不匹配
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\DLL.cpp(76,26): warning C4018:  “<”: 有符号/无符号不匹配
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\DLL.cpp(80,28): warning C4018:  “<”: 有符号/无符号不匹配
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\DLL.cpp(119,27): warning C4018:  “<”: 有符号/无符号不匹配
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\DLL.cpp(171,26): warning C4018:  “<”: 有符号/无符号不匹配
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\DLL.cpp(200,27): warning C4018:  “<”: 有符号/无符号不匹配
+  main.cpp
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\DLL.cpp(217,26): warning C4018:  “<”: 有符号/无符号不匹配
   pinrand.cpp
 F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\base.h(301,1): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
 F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\base.h(301,1): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
@@ -25,7 +32,7 @@ F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\pinrand.cpp(100,9
 F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\pinrand.cpp(100,9): warning C4101: F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\commom.cpp(23) : warning C4715: “RoutingSpace_3D::judgewire”: 不是所有的控件路径都返回值
 F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\pinrand.cpp(100,9): warning C4101: F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\commom.cpp(72) : warning C4715: “RoutingSpace_3D::computespacing”: 不是所有的控件路径都返回值
 F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\pinrand.cpp(100,9): warning C4101: F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\commom.cpp(85) : warning C4715: “RoutingSpace_3D::maxwidth”: 不是所有的控件路径都返回值
-F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\pinrand.cpp(100,9): warning C4101: F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\commom.cpp(112) : warning C4715: “RoutingSpace_3D::findsmaller”: 不是所有的控件路径都返回值
 F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\pinrand.cpp(100,9): warning C4101: F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\commom.cpp(98) : warning C4715: “RoutingSpace_3D::findbigger”: 不是所有的控件路径都返回值
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\pinrand.cpp(100,9): warning C4101: F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\commom.cpp(112) : warning C4715: “RoutingSpace_3D::findsmaller”: 不是所有的控件路径都返回值
     正在创建库 F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\x64\Debug\link.lib 和对象 F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\x64\Debug\link.exp
   link.vcxproj -> F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link\x64\Debug\link.dll

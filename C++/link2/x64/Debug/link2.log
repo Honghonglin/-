@@ -1,0 +1,47 @@
+﻿  areaviolation.cpp
+  base.cpp
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.h(336,1): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.h(336,1): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.cpp(65,25): warning C4244:  “=”: 从“double”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.cpp(67,26): warning C4244:  “=”: 从“double”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.cpp(246,30): warning C4101:  “sy2”: 未引用的局部变量
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.cpp(245,26): warning C4101:  “sz2”: 未引用的局部变量
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.cpp(246,25): warning C4101:  “sx2”: 未引用的局部变量
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.cpp(306,42): warning C4267:  “初始化”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.cpp(325,52): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.cpp(353,53): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.cpp(366,33): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+  commom.cpp
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.cpp(396,50): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.h(336,1): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\commom.cpp(174,30): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\commom.cpp(183,31): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+  ctcviolation.cpp
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\commom.cpp(203,6): warning C4101:  “t”: 未引用的局部变量
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.h(336,1): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\ctcviolation.cpp(33,30): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\ctcviolation.cpp(45,29): warning C4267:  “初始化”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\ctcviolation.cpp(46,29): warning C4267:  “初始化”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\ctcviolation.cpp(164,11): warning C4101:  “prl”: 未引用的局部变量
+  cutsviolation.cpp
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\ctcviolation.cpp(175,9): warning C4101:  “length”: 未引用的局部变量
+  eofviolation.cpp
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.h(336,1): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.h(336,1): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\eofviolation.cpp(10,29): warning C4267:  “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  DLL.cpp
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\eofviolation.cpp(11,29): warning C4267:  “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  prlviolation.cpp
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.h(336,1): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\base.h(336,1): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\prlviolation.cpp(91,26): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\prlviolation.cpp(92,30): warning C4267:  “=”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\prlviolation.cpp(107,29): warning C4267:  “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  正在生成代码...
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\prlviolation.cpp(108,29): warning C4267:  “初始化”: 从“size_t”转换到“int”，可能丢失数据
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\prlviolation.cpp(108,29): warning C4267: F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\commom.cpp(170) : warning C4715: “RoutingSpace_3D::judgewire”: 不是所有的控件路径都返回值
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\prlviolation.cpp(108,29): warning C4267: F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\commom.cpp(244) : warning C4715: “RoutingSpace_3D::maxwidth”: 不是所有的控件路径都返回值
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\prlviolation.cpp(108,29): warning C4267: F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\commom.cpp(257) : warning C4715: “RoutingSpace_3D::findbigger”: 不是所有的控件路径都返回值
+F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\prlviolation.cpp(108,29): warning C4267: F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\commom.cpp(271) : warning C4715: “RoutingSpace_3D::findsmaller”: 不是所有的控件路径都返回值
+    正在创建库 F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\x64\Debug\link2.lib 和对象 F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\x64\Debug\link2.exp
+  link2.vcxproj -> F:\unityproject\Deom-master\Deom-master\Demo\Elastic_ball\link2\x64\Debug\link2.dll

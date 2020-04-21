@@ -10,7 +10,7 @@ namespace Assets.Script.Auto
 {
     class LimitTextFactory : MonoBehaviour
     {
-        [DllImport("link3")]
+        [DllImport("link4")]
         private static extern void LimitFun();
         [HideInInspector]
         public GameObject prefabText = null;
